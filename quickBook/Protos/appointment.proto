@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option csharp_namespace = "Booking.Grpc";
+
+package appointment;
+
+service AppointmentService {
+  rpc CreateAppointment (CreateAppointmentRequest) returns (AppointmentResponse);
+  rpc GetAppointment (GetAppointmentRequest) returns (AppointmentResponse);
+}
+
+message CreateAppointmentRequest {
+  string user_id = 1;
+  string provider_id = 2;
+  string service_id = 3;
+  string date = 4; // "2025-05-25"
+  string time = 5; // "10:00"
+}
+
+message GetAppointmentRequest {
+  string appointment_id = 1;
+}
+
+message AppointmentResponse {
+  string appointment_id = 1;
+  string status = 2;
+  string message = 3;
+}
