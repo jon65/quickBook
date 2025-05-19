@@ -15,3 +15,5 @@ public class AppointmentRequest
     public DateTime Date { get; set; }
     public string Time { get; set; }
 }
+
+
