@@ -8,5 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Enable routing to controllers
 var app = builder.Build();
+services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+services.AddScoped<BookAppointmentUseCase>();
+
 app.MapControllers();
 app.Run();
