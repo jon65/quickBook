@@ -1,3 +1,5 @@
+namespace quickBook.Application.DTO;
+
 public class BookingDto
 {
     public Guid Id { get; set; }
